@@ -18,6 +18,20 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        addDoneButtonToKeyboard()
+    }
+    
+    func addDoneButtonToKeyboard() {
+        let toolbarDone = UIToolbar.init()
+        toolbarDone.sizeToFit()
+        let barBtnDone = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(MainViewController.ageTextDoneButtonPressed))
+        toolbarDone.items = [barBtnDone]
+        ageTextField.inputAccessoryView = toolbarDone
+    }
+    
+    func ageTextDoneButtonPressed() {
+        self.ageTextField.resignFirstResponder()
     }
     
     @IBAction func seeResultsPressed(_ sender: AnyObject) {

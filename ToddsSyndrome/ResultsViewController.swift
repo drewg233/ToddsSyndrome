@@ -37,7 +37,7 @@ class ResultsViewController: UIViewController {
                 self.view.layoutIfNeeded()
             }, completion: nil)
         
-        UIView.animate(withDuration: 1.0, delay: 4.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: [], animations: {
+        UIView.animate(withDuration: 1.0, delay: 2.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: [], animations: {
                 self.controlsStackViewBottomConstraint.constant += 60
                 self.view.layoutIfNeeded()
             }, completion: nil)
@@ -58,15 +58,10 @@ class ResultsViewController: UIViewController {
     }
     
     @IBAction func shareButtonPressed(_ sender: AnyObject) {
-        // Text to share
-        let text = results?.getShareResultText()
+        if let text = results?.getShareResultText() {
+            let vc = UIActivityViewController(activityItems: [text], applicationActivities: [])
+            present(vc, animated: true)
+        }
         
-        // Set up activity view controller
-        let textToShare = [ text ]
-        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view
-        
-        // Present the view controller
-        self.present(activityViewController, animated: true, completion: nil)
     }
 }

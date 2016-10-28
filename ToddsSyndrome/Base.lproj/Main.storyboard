@@ -158,5 +158,35 @@ to TS Calculator</string>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
+        <!--Results View Controller-->
+        <scene sceneID="avD-6H-bC9">
+            <objects>
+                <viewController id="gVM-w3-0Fh" customClass="ResultsViewController" customModule="ToddsSyndrome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Mi-7v-sQ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="AoV-ib-Zha"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hzy-GU-idg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4H-Ir-Enu">
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="35"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a4H-Ir-Enu" firstAttribute="leading" secondItem="Hzy-GU-idg" secondAttribute="leading" constant="16" id="E7U-Ir-1ER"/>
+                            <constraint firstAttribute="trailing" secondItem="a4H-Ir-Enu" secondAttribute="trailing" constant="16" id="Q3m-Mr-FFH"/>
+                            <constraint firstItem="a4H-Ir-Enu" firstAttribute="top" secondItem="8Mi-7v-sQ2" secondAttribute="bottom" constant="30" id="sWn-AJ-TEs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GS1-Rl-Wnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="125"/>
+        </scene>
     </scenes>
 </document>

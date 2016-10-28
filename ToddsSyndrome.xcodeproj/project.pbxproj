@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9B316C81DC2D11200D03539 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B316C71DC2D11200D03539 /* ResultsViewController.swift */; };
 		B9F59B4B1DC2C712005B97CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F59B4A1DC2C712005B97CE /* AppDelegate.swift */; };
 		B9F59B4D1DC2C712005B97CE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F59B4C1DC2C712005B97CE /* MainViewController.swift */; };
 		B9F59B501DC2C712005B97CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F59B4E1DC2C712005B97CE /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B9B316C71DC2D11200D03539 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		B9F59B471DC2C712005B97CE /* ToddsSyndrome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToddsSyndrome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F59B4A1DC2C712005B97CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9F59B4C1DC2C712005B97CE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				B9F59B4A1DC2C712005B97CE /* AppDelegate.swift */,
 				B9F59B4C1DC2C712005B97CE /* MainViewController.swift */,
+				B9B316C71DC2D11200D03539 /* ResultsViewController.swift */,
 				B9F59B4E1DC2C712005B97CE /* Main.storyboard */,
 				B9F59B511DC2C712005B97CE /* Assets.xcassets */,
 				B9F59B531DC2C712005B97CE /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 			files = (
 				B9F59B4D1DC2C712005B97CE /* MainViewController.swift in Sources */,
 				B9F59B4B1DC2C712005B97CE /* AppDelegate.swift in Sources */,
+				B9B316C81DC2D11200D03539 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +432,7 @@
 				B9F59B661DC2C712005B97CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9F59B671DC2C712005B97CE /* Build configuration list for PBXNativeTarget "ToddsSyndromeTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +441,7 @@
 				B9F59B691DC2C712005B97CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

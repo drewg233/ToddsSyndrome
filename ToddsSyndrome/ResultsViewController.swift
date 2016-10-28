@@ -9,11 +9,15 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
+    
+    @IBOutlet weak var resultsLabel: UILabel!
+    
+    var results: Double = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        resultsLabel.text = "\(results)%"
     }
 
     override func didReceiveMemoryWarning() {

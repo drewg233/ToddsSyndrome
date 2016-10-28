@@ -71,13 +71,13 @@ to TS Calculator</string>
                                 <color key="textColor" red="0.45882352939999999" green="0.53333333329999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNF-SE-ATy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your age." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNF-SE-ATy">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0bw-BR-2Zl"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="G1c-z9-kVe">
                                 <constraints>
@@ -87,6 +87,7 @@ to TS Calculator</string>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
                                 </segments>
+                                <color key="tintColor" red="0.3803921569" green="0.81176470590000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6rJ-XX-FOu">
                                 <constraints>
@@ -96,6 +97,7 @@ to TS Calculator</string>
                                     <segment title="No"/>
                                     <segment title="Yes"/>
                                 </segments>
+                                <color key="tintColor" red="0.3803921569" green="0.81176470590000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPl-9D-LQ4">
                                 <color key="backgroundColor" red="0.38039215686274508" green="0.81176470588235294" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
@@ -107,6 +109,9 @@ to TS Calculator</string>
                                 <state key="normal" title="See Results">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="seeResultsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VC6-98-DdW"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pXU-ry-7yH">
                                 <constraints>
@@ -116,6 +121,7 @@ to TS Calculator</string>
                                     <segment title="No"/>
                                     <segment title="Yes"/>
                                 </segments>
+                                <color key="tintColor" red="0.3803921569" green="0.81176470590000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -153,10 +159,17 @@ to TS Calculator</string>
                             <constraint firstItem="VXA-r9-v4K" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vw9-MC-nd8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="UNF-SE-ATy" id="9yd-dG-6Dr"/>
+                        <outlet property="genderSegmentedControl" destination="G1c-z9-kVe" id="dhf-gg-SWr"/>
+                        <outlet property="hallucinogenicDrugsSegmentedControl" destination="6rJ-XX-FOu" id="TRk-Dz-GFz"/>
+                        <outlet property="migranesSegmentedControl" destination="pXU-ry-7yH" id="Mp4-92-wV0"/>
+                        <segue destination="gVM-w3-0Fh" kind="show" identifier="showResultsSegue" id="mqA-yS-NZr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="9" y="125"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="avD-6H-bC9">
@@ -175,6 +188,13 @@ to TS Calculator</string>
                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="75%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGR-V4-CPP">
+                                <frame key="frameInset" minX="33" minY="181" width="150" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -183,10 +203,13 @@ to TS Calculator</string>
                             <constraint firstItem="a4H-Ir-Enu" firstAttribute="top" secondItem="8Mi-7v-sQ2" secondAttribute="bottom" constant="30" id="sWn-AJ-TEs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultsLabel" destination="OGR-V4-CPP" id="r7U-Ck-o3W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GS1-Rl-Wnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="125"/>
+            <point key="canvasLocation" x="848.79999999999995" y="124.58770614692655"/>
         </scene>
     </scenes>
 </document>

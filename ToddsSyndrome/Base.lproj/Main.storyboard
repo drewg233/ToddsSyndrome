@@ -187,7 +187,7 @@ to TS Calculator</string>
                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGR-V4-CPP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGR-V4-CPP">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="ATd-r3-9zY"/>
                                 </constraints>
@@ -195,7 +195,7 @@ to TS Calculator</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results are in and you are 100% likely to have Todd's Syndrom. You should probably stop taking those hallucinogenic drugs." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn3-zc-fuL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn3-zc-fuL">
                                 <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="19"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.53333333329999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -241,6 +241,7 @@ to TS Calculator</string>
                     </view>
                     <connections>
                         <outlet property="resultsLabel" destination="OGR-V4-CPP" id="r7U-Ck-o3W"/>
+                        <outlet property="resultsTextLabel" destination="mn3-zc-fuL" id="oPI-cz-eJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GS1-Rl-Wnz" userLabel="First Responder" sceneMemberID="firstResponder"/>

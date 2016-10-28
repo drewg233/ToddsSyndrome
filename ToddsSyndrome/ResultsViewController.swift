@@ -11,13 +11,23 @@ import UIKit
 class ResultsViewController: UIViewController {
     
     @IBOutlet weak var resultsLabel: UILabel!
+    @IBOutlet weak var resultsTextLabel: UILabel!
     
-    var results: Double = 0.0
+    var results: TSCalc?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        resultsLabel.text = "\(results)%"
+        loadScreen()
+    }
+    
+    func loadScreen() {
+        if let chanceOfToddsSyndrome = results?.chanceOfToddsSyndrome() {
+            resultsLabel.text = "\(chanceOfToddsSyndrome)%"
+            if let resultsText = results?.getResultText() {
+                resultsTextLabel.text = "Results are in and you are \(chanceOfToddsSyndrome)% likely to have Todd's Syndrome. \(resultsText)"
+            }
+        }
     }
 
     @IBAction func homeButtonPressed(_ sender: AnyObject) {

@@ -11,8 +11,6 @@ import XCTest
 
 class ToddsSyndromeTests: XCTestCase {
     
-    let tSCalc = TSCalc()
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,11 +21,12 @@ class ToddsSyndromeTests: XCTestCase {
         let isMale = true
         let migranes = true
         let hallucinogenicDrugs = true
+        let tsCalc = TSCalc(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
         
         let expected = 100.0
-        let results = tSCalc.chanceOfToddsSyndrome(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
+        let results = tsCalc.chanceOfToddsSyndrome()
         
-        XCTAssertEqual(expected, results, "This person matches all criteria to have Todds's Syndrom and should return 100.")
+        XCTAssertEqual(expected, results, "This person matches all criteria to have Todds's Syndrome and should return 100.")
     }
     
     func testChanceOfToddsSyndrome2() {
@@ -35,9 +34,10 @@ class ToddsSyndromeTests: XCTestCase {
         let isMale = true
         let migranes = true
         let hallucinogenicDrugs = true
+        let tsCalc = TSCalc(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
         
         let expected = 75.0
-        let results = tSCalc.chanceOfToddsSyndrome(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
+        let results = tsCalc.chanceOfToddsSyndrome()
         
         XCTAssertEqual(expected, results, "This person is under 15 but matches the rest of the criteria and should return 75.")
     }
@@ -47,9 +47,10 @@ class ToddsSyndromeTests: XCTestCase {
         let isMale = false
         let migranes = true
         let hallucinogenicDrugs = true
+        let tsCalc = TSCalc(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
         
         let expected = 75.0
-        let results = tSCalc.chanceOfToddsSyndrome(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
+        let results = tsCalc.chanceOfToddsSyndrome()
         
         XCTAssertEqual(expected, results, "This person is over 15, female, has migranes, and takes hallucinogenic drugs. Should return 75.")
     }
@@ -59,9 +60,10 @@ class ToddsSyndromeTests: XCTestCase {
         let isMale = false
         let migranes = false
         let hallucinogenicDrugs = true
+        let tsCalc = TSCalc(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
         
         let expected = 50.0
-        let results = tSCalc.chanceOfToddsSyndrome(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
+        let results = tsCalc.chanceOfToddsSyndrome()
         
         XCTAssertEqual(expected, results, "This person is over 15, female, doesnt have migranes, and takes hallucinogenic drugs. Should return 50.")
     }
@@ -71,9 +73,10 @@ class ToddsSyndromeTests: XCTestCase {
         let isMale = false
         let migranes = false
         let hallucinogenicDrugs = false
+        let tsCalc = TSCalc(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
         
         let expected = 25.0
-        let results = tSCalc.chanceOfToddsSyndrome(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
+        let results = tsCalc.chanceOfToddsSyndrome()
         
         XCTAssertEqual(expected, results, "This person is over 15, female, doesnt have migranes, and doesnt take hallucinogenic drugs. Should return 25.")
     }
@@ -83,9 +86,10 @@ class ToddsSyndromeTests: XCTestCase {
         let isMale = false
         let migranes = false
         let hallucinogenicDrugs = false
+        let tsCalc = TSCalc(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
         
         let expected = 0.0
-        let results = tSCalc.chanceOfToddsSyndrome(age: age, isMale: isMale, migranes: migranes, hallucinogenicDrugs: hallucinogenicDrugs)
+        let results = tsCalc.chanceOfToddsSyndrome()
         
         XCTAssertEqual(expected, results, "This person is under 15, female, doesnt have migranes, and doesnt take hallucinogenic drugs. Should return 0.")
     }

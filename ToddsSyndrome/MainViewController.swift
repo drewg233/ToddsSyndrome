@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
             let hasMigranes = migranesSegmentedControl.selectedSegmentIndex == 1
             let doesDrugs = hallucinogenicDrugsSegmentedControl.selectedSegmentIndex == 1
             
-            resultsVC.results = TSCalc().chanceOfToddsSyndrome(age: age!, isMale: isMale, migranes: hasMigranes, hallucinogenicDrugs: doesDrugs)
+            resultsVC.results = TSCalc(age: age!, isMale: isMale, migranes: hasMigranes, hallucinogenicDrugs: doesDrugs)
         }
     }
 }

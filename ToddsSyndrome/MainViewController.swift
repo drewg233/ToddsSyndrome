@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
             let resultsVC = segue.destination as! ResultsViewController
             
             let age = Int(ageTextField.text!)
-            let isMale = genderSegmentedControl.isEnabledForSegment(at: 0)
+            let isMale = genderSegmentedControl.selectedSegmentIndex == 0
             let hasMigranes = migranesSegmentedControl.selectedSegmentIndex == 1
             let doesDrugs = hallucinogenicDrugsSegmentedControl.selectedSegmentIndex == 1
             

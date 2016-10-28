@@ -17,7 +17,7 @@ class ToddsSyndromeTests: XCTestCase {
     }
     
     func testChanceOfToddsSyndrome1() {
-        let age = 25
+        let age = 10
         let isMale = true
         let migranes = true
         let hallucinogenicDrugs = true
@@ -30,7 +30,7 @@ class ToddsSyndromeTests: XCTestCase {
     }
     
     func testChanceOfToddsSyndrome2() {
-        let age = 13
+        let age = 17
         let isMale = true
         let migranes = true
         let hallucinogenicDrugs = true
@@ -39,11 +39,11 @@ class ToddsSyndromeTests: XCTestCase {
         let expected = 75.0
         let results = tsCalc.chanceOfToddsSyndrome()
         
-        XCTAssertEqual(expected, results, "This person is under 15 but matches the rest of the criteria and should return 75.")
+        XCTAssertEqual(expected, results, "This person is over 15 but matches the rest of the criteria and should return 75.")
     }
     
     func testChanceOfToddsSyndrome3() {
-        let age = 17
+        let age = 10
         let isMale = false
         let migranes = true
         let hallucinogenicDrugs = true
@@ -52,11 +52,11 @@ class ToddsSyndromeTests: XCTestCase {
         let expected = 75.0
         let results = tsCalc.chanceOfToddsSyndrome()
         
-        XCTAssertEqual(expected, results, "This person is over 15, female, has migranes, and takes hallucinogenic drugs. Should return 75.")
+        XCTAssertEqual(expected, results, "This person is under 15, female, has migranes, and takes hallucinogenic drugs. Should return 75.")
     }
     
     func testChanceOfToddsSyndrome4() {
-        let age = 17
+        let age = 10
         let isMale = false
         let migranes = false
         let hallucinogenicDrugs = true
@@ -65,11 +65,11 @@ class ToddsSyndromeTests: XCTestCase {
         let expected = 50.0
         let results = tsCalc.chanceOfToddsSyndrome()
         
-        XCTAssertEqual(expected, results, "This person is over 15, female, doesnt have migranes, and takes hallucinogenic drugs. Should return 50.")
+        XCTAssertEqual(expected, results, "This person is under 15, female, doesnt have migranes, and takes hallucinogenic drugs. Should return 50.")
     }
     
     func testChanceOfToddsSyndrome5() {
-        let age = 17
+        let age = 10
         let isMale = false
         let migranes = false
         let hallucinogenicDrugs = false
@@ -78,11 +78,11 @@ class ToddsSyndromeTests: XCTestCase {
         let expected = 25.0
         let results = tsCalc.chanceOfToddsSyndrome()
         
-        XCTAssertEqual(expected, results, "This person is over 15, female, doesnt have migranes, and doesnt take hallucinogenic drugs. Should return 25.")
+        XCTAssertEqual(expected, results, "This person is under 15, female, doesnt have migranes, and doesnt take hallucinogenic drugs. Should return 25.")
     }
     
     func testChanceOfToddsSyndrome6() {
-        let age = 13
+        let age = 17
         let isMale = false
         let migranes = false
         let hallucinogenicDrugs = false
@@ -91,6 +91,6 @@ class ToddsSyndromeTests: XCTestCase {
         let expected = 0.0
         let results = tsCalc.chanceOfToddsSyndrome()
         
-        XCTAssertEqual(expected, results, "This person is under 15, female, doesnt have migranes, and doesnt take hallucinogenic drugs. Should return 0.")
+        XCTAssertEqual(expected, results, "This person is over 15, female, doesnt have migranes, and doesnt take hallucinogenic drugs. Should return 0.")
     }
 }

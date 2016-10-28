@@ -187,14 +187,6 @@ to TS Calculator</string>
                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGR-V4-CPP">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="87" id="ATd-r3-9zY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="75"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn3-zc-fuL">
                                 <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="19"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.53333333329999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -216,32 +208,46 @@ to TS Calculator</string>
                                         <state key="normal" title="Share Results" backgroundImage="ShareButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shareButtonPressed:" destination="gVM-w3-0Fh" eventType="touchUpInside" id="h2X-pu-64m"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="yFF-XR-jVU"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGR-V4-CPP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="ATd-r3-9zY"/>
+                                    <constraint firstAttribute="width" constant="250" id="aUr-zK-RBO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AoV-ib-Zha" firstAttribute="top" secondItem="Kn4-JJ-V0b" secondAttribute="bottom" constant="20" id="1p7-fV-pBF"/>
                             <constraint firstItem="Kn4-JJ-V0b" firstAttribute="leading" secondItem="Hzy-GU-idg" secondAttribute="leading" constant="16" id="4rd-bp-EVw"/>
                             <constraint firstItem="OGR-V4-CPP" firstAttribute="centerY" secondItem="Hzy-GU-idg" secondAttribute="centerY" constant="-100" id="6BS-Qj-emX"/>
+                            <constraint firstItem="OGR-V4-CPP" firstAttribute="centerX" secondItem="Hzy-GU-idg" secondAttribute="centerX" id="BNe-El-RYA"/>
                             <constraint firstItem="a4H-Ir-Enu" firstAttribute="leading" secondItem="Hzy-GU-idg" secondAttribute="leading" constant="16" id="E7U-Ir-1ER"/>
                             <constraint firstAttribute="trailing" secondItem="a4H-Ir-Enu" secondAttribute="trailing" constant="16" id="Q3m-Mr-FFH"/>
                             <constraint firstItem="mn3-zc-fuL" firstAttribute="trailing" secondItem="Hzy-GU-idg" secondAttribute="trailingMargin" id="TeH-m9-hog"/>
                             <constraint firstItem="mn3-zc-fuL" firstAttribute="top" secondItem="OGR-V4-CPP" secondAttribute="bottom" constant="10" id="YIb-E5-EUR"/>
                             <constraint firstItem="mn3-zc-fuL" firstAttribute="leading" secondItem="Hzy-GU-idg" secondAttribute="leadingMargin" id="eLM-fk-IMW"/>
-                            <constraint firstItem="OGR-V4-CPP" firstAttribute="leading" secondItem="Hzy-GU-idg" secondAttribute="leadingMargin" id="gKu-aB-rUt"/>
-                            <constraint firstItem="OGR-V4-CPP" firstAttribute="trailing" secondItem="Hzy-GU-idg" secondAttribute="trailingMargin" id="jyP-PE-2YK"/>
                             <constraint firstItem="a4H-Ir-Enu" firstAttribute="top" secondItem="8Mi-7v-sQ2" secondAttribute="bottom" constant="30" id="sWn-AJ-TEs"/>
                             <constraint firstAttribute="trailing" secondItem="Kn4-JJ-V0b" secondAttribute="trailing" constant="16" id="yMp-h9-Orq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="controlsStackViewBottomConstraint" destination="1p7-fV-pBF" id="kIo-7i-lme"/>
                         <outlet property="resultsLabel" destination="OGR-V4-CPP" id="r7U-Ck-o3W"/>
+                        <outlet property="resultsLabelCenterConstraint" destination="BNe-El-RYA" id="LtE-l1-epc"/>
                         <outlet property="resultsTextLabel" destination="mn3-zc-fuL" id="oPI-cz-eJm"/>
+                        <outlet property="resultsTextLabelLeftConstraint" destination="eLM-fk-IMW" id="jH5-iO-YQV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GS1-Rl-Wnz" userLabel="First Responder" sceneMemberID="firstResponder"/>

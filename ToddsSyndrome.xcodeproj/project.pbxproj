@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B9F59B4B1DC2C712005B97CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F59B4A1DC2C712005B97CE /* AppDelegate.swift */; };
-		B9F59B4D1DC2C712005B97CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F59B4C1DC2C712005B97CE /* ViewController.swift */; };
+		B9F59B4D1DC2C712005B97CE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F59B4C1DC2C712005B97CE /* MainViewController.swift */; };
 		B9F59B501DC2C712005B97CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F59B4E1DC2C712005B97CE /* Main.storyboard */; };
 		B9F59B521DC2C712005B97CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F59B511DC2C712005B97CE /* Assets.xcassets */; };
 		B9F59B551DC2C712005B97CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F59B531DC2C712005B97CE /* LaunchScreen.storyboard */; };
 		B9F59B601DC2C712005B97CE /* ToddsSyndromeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F59B5F1DC2C712005B97CE /* ToddsSyndromeTests.swift */; };
+		B9F59B6B1DC2CB87005B97CE /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9F59B6A1DC2CB87005B97CE /* Rubik-Light.ttf */; };
+		B9F59B6E1DC2CEE6005B97CE /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9F59B6D1DC2CEE6005B97CE /* Rubik-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,7 @@
 /* Begin PBXFileReference section */
 		B9F59B471DC2C712005B97CE /* ToddsSyndrome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToddsSyndrome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F59B4A1DC2C712005B97CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9F59B4C1DC2C712005B97CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9F59B4C1DC2C712005B97CE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B9F59B4F1DC2C712005B97CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9F59B511DC2C712005B97CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9F59B541DC2C712005B97CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		B9F59B5B1DC2C712005B97CE /* ToddsSyndromeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToddsSyndromeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F59B5F1DC2C712005B97CE /* ToddsSyndromeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToddsSyndromeTests.swift; sourceTree = "<group>"; };
 		B9F59B611DC2C712005B97CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9F59B6A1DC2CB87005B97CE /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		B9F59B6D1DC2CEE6005B97CE /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				B9F59B4A1DC2C712005B97CE /* AppDelegate.swift */,
-				B9F59B4C1DC2C712005B97CE /* ViewController.swift */,
+				B9F59B4C1DC2C712005B97CE /* MainViewController.swift */,
 				B9F59B4E1DC2C712005B97CE /* Main.storyboard */,
 				B9F59B511DC2C712005B97CE /* Assets.xcassets */,
 				B9F59B531DC2C712005B97CE /* LaunchScreen.storyboard */,
 				B9F59B561DC2C712005B97CE /* Info.plist */,
+				B9F59B6C1DC2CB8A005B97CE /* Fonts */,
 			);
 			path = ToddsSyndrome;
 			sourceTree = "<group>";
@@ -94,6 +99,15 @@
 				B9F59B611DC2C712005B97CE /* Info.plist */,
 			);
 			path = ToddsSyndromeTests;
+			sourceTree = "<group>";
+		};
+		B9F59B6C1DC2CB8A005B97CE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B9F59B6D1DC2CEE6005B97CE /* Rubik-Regular.ttf */,
+				B9F59B6A1DC2CB87005B97CE /* Rubik-Light.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F59B551DC2C712005B97CE /* LaunchScreen.storyboard in Resources */,
+				B9F59B6B1DC2CB87005B97CE /* Rubik-Light.ttf in Resources */,
 				B9F59B521DC2C712005B97CE /* Assets.xcassets in Resources */,
+				B9F59B6E1DC2CEE6005B97CE /* Rubik-Regular.ttf in Resources */,
 				B9F59B501DC2C712005B97CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,7 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F59B4D1DC2C712005B97CE /* ViewController.swift in Sources */,
+				B9F59B4D1DC2C712005B97CE /* MainViewController.swift in Sources */,
 				B9F59B4B1DC2C712005B97CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

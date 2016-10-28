@@ -1,14 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Light.ttf">
+            <string>Rubik-Light</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ToddsSyndrome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +26,137 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXA-r9-v4K">
+                                <string key="text">Welcome
+to TS Calculator</string>
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="35"/>
+                                <color key="textColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todd's Syndrom is a disorienting neurological condition that affects human perception. " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyR-Hi-bdH">
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="19"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.53333333333333333" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-RI-dg3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="GZk-st-0o7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="14"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.53333333329999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qne-7U-qxX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="r7q-aX-cbD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="14"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.53333333329999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequent migranes" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtK-JV-RXg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="2zd-oe-yP6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="14"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.53333333329999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use of hallucinogenic drugs" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmE-XI-o65">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="cRX-gF-QSv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="14"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.53333333329999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNF-SE-ATy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0bw-BR-2Zl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="G1c-z9-kVe">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="VsX-p2-ryY"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6rJ-XX-FOu">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="F5o-1h-m5f"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="No"/>
+                                    <segment title="Yes"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPl-9D-LQ4">
+                                <color key="backgroundColor" red="0.38039215686274508" green="0.81176470588235294" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="l1i-rE-5c7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="See Results">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pXU-ry-7yH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="6g1-Oa-lNH"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="No"/>
+                                    <segment title="Yes"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DtK-JV-RXg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="09g-cf-x5F"/>
+                            <constraint firstItem="Qne-7U-qxX" firstAttribute="top" secondItem="UNF-SE-ATy" secondAttribute="bottom" constant="14" id="2Iz-rd-LAY"/>
+                            <constraint firstItem="6rJ-XX-FOu" firstAttribute="centerY" secondItem="AmE-XI-o65" secondAttribute="centerY" id="41F-Rx-yox"/>
+                            <constraint firstItem="pXU-ry-7yH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4uV-5C-On4"/>
+                            <constraint firstItem="AmE-XI-o65" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5Wb-yA-Pjc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UPl-9D-LQ4" secondAttribute="bottom" constant="20" id="6XF-Z5-CyK"/>
+                            <constraint firstItem="pXU-ry-7yH" firstAttribute="leading" secondItem="DtK-JV-RXg" secondAttribute="trailing" constant="8" id="7WF-DB-dnT"/>
+                            <constraint firstItem="pXU-ry-7yH" firstAttribute="centerY" secondItem="DtK-JV-RXg" secondAttribute="centerY" id="7XQ-E9-h8K"/>
+                            <constraint firstItem="KyR-Hi-bdH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Aic-3H-S5Z"/>
+                            <constraint firstItem="DtK-JV-RXg" firstAttribute="top" secondItem="G1c-z9-kVe" secondAttribute="bottom" constant="40" id="D3U-Iw-wA1"/>
+                            <constraint firstItem="UNF-SE-ATy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Fy1-Og-IHj"/>
+                            <constraint firstItem="KyR-Hi-bdH" firstAttribute="top" secondItem="VXA-r9-v4K" secondAttribute="bottom" constant="8" id="Ikb-2f-gx2"/>
+                            <constraint firstItem="b7O-RI-dg3" firstAttribute="top" secondItem="KyR-Hi-bdH" secondAttribute="bottom" constant="20" id="JXT-3f-Pbn"/>
+                            <constraint firstItem="VXA-r9-v4K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="LJc-uJ-7gL"/>
+                            <constraint firstItem="6rJ-XX-FOu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Msk-Rq-RPp"/>
+                            <constraint firstItem="b7O-RI-dg3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Naw-ne-noU"/>
+                            <constraint firstItem="VXA-r9-v4K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OKA-LN-qdn"/>
+                            <constraint firstItem="b7O-RI-dg3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="U3t-pu-ff5"/>
+                            <constraint firstItem="KyR-Hi-bdH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UOq-NO-UJ4"/>
+                            <constraint firstItem="UPl-9D-LQ4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bKo-ny-L9o"/>
+                            <constraint firstItem="Qne-7U-qxX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cqm-zt-7JJ"/>
+                            <constraint firstItem="6rJ-XX-FOu" firstAttribute="leading" secondItem="AmE-XI-o65" secondAttribute="trailing" constant="8" id="dxm-f7-nfb"/>
+                            <constraint firstItem="UPl-9D-LQ4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fBx-NZ-gqc"/>
+                            <constraint firstItem="UNF-SE-ATy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iFY-qC-VFT"/>
+                            <constraint firstItem="AmE-XI-o65" firstAttribute="top" secondItem="DtK-JV-RXg" secondAttribute="bottom" constant="40" id="ipT-W1-x5R"/>
+                            <constraint firstItem="UNF-SE-ATy" firstAttribute="top" secondItem="b7O-RI-dg3" secondAttribute="bottom" constant="8" id="n4Q-Ve-SpS"/>
+                            <constraint firstItem="G1c-z9-kVe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="p7T-h1-uav"/>
+                            <constraint firstItem="G1c-z9-kVe" firstAttribute="top" secondItem="Qne-7U-qxX" secondAttribute="bottom" constant="8" id="pi7-Xz-UB7"/>
+                            <constraint firstItem="Qne-7U-qxX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qi5-Zm-1OZ"/>
+                            <constraint firstItem="G1c-z9-kVe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qnT-kM-b5o"/>
+                            <constraint firstItem="VXA-r9-v4K" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vw9-MC-nd8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>

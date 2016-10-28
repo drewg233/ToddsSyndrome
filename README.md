@@ -3,7 +3,7 @@ Todd's Syndrome App
 
 #### :star2: App demonstrating calculation based on user input.
 
-<img src="https://s3-us-west-2.amazonaws.com/personalprojectsdrewgarcia/TS.gif" width="248">
+<img src="https://github.com/drewg233/ToddsSyndrome/raw/master/TS.gif" width="248">
 
 ## Installation
 

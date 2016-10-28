@@ -99,14 +99,13 @@ to TS Calculator</string>
                                 </segments>
                                 <color key="tintColor" red="0.3803921569" green="0.81176470590000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPl-9D-LQ4">
-                                <color key="backgroundColor" red="0.38039215686274508" green="0.81176470588235294" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPl-9D-LQ4">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="l1i-rE-5c7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
                                 <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="See Results">
+                                <state key="normal" title="See Results" backgroundImage="ResultsButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -188,19 +187,56 @@ to TS Calculator</string>
                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="75%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGR-V4-CPP">
-                                <frame key="frameInset" minX="33" minY="181" width="150" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGR-V4-CPP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="ATd-r3-9zY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="75"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results are in and you are 100% likely to have Todd's Syndrom. You should probably stop taking those hallucinogenic drugs." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn3-zc-fuL">
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="19"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.53333333329999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kn4-JJ-V0b">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ady-LG-d2D">
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Home" backgroundImage="HomeButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="homeButtonPressed:" destination="gVM-w3-0Fh" eventType="touchUpInside" id="OoH-NY-j3v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHG-gi-eUF">
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Share Results" backgroundImage="ShareButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yFF-XR-jVU"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AoV-ib-Zha" firstAttribute="top" secondItem="Kn4-JJ-V0b" secondAttribute="bottom" constant="20" id="1p7-fV-pBF"/>
+                            <constraint firstItem="Kn4-JJ-V0b" firstAttribute="leading" secondItem="Hzy-GU-idg" secondAttribute="leading" constant="16" id="4rd-bp-EVw"/>
+                            <constraint firstItem="OGR-V4-CPP" firstAttribute="centerY" secondItem="Hzy-GU-idg" secondAttribute="centerY" constant="-100" id="6BS-Qj-emX"/>
                             <constraint firstItem="a4H-Ir-Enu" firstAttribute="leading" secondItem="Hzy-GU-idg" secondAttribute="leading" constant="16" id="E7U-Ir-1ER"/>
                             <constraint firstAttribute="trailing" secondItem="a4H-Ir-Enu" secondAttribute="trailing" constant="16" id="Q3m-Mr-FFH"/>
+                            <constraint firstItem="mn3-zc-fuL" firstAttribute="trailing" secondItem="Hzy-GU-idg" secondAttribute="trailingMargin" id="TeH-m9-hog"/>
+                            <constraint firstItem="mn3-zc-fuL" firstAttribute="top" secondItem="OGR-V4-CPP" secondAttribute="bottom" constant="10" id="YIb-E5-EUR"/>
+                            <constraint firstItem="mn3-zc-fuL" firstAttribute="leading" secondItem="Hzy-GU-idg" secondAttribute="leadingMargin" id="eLM-fk-IMW"/>
+                            <constraint firstItem="OGR-V4-CPP" firstAttribute="leading" secondItem="Hzy-GU-idg" secondAttribute="leadingMargin" id="gKu-aB-rUt"/>
+                            <constraint firstItem="OGR-V4-CPP" firstAttribute="trailing" secondItem="Hzy-GU-idg" secondAttribute="trailingMargin" id="jyP-PE-2YK"/>
                             <constraint firstItem="a4H-Ir-Enu" firstAttribute="top" secondItem="8Mi-7v-sQ2" secondAttribute="bottom" constant="30" id="sWn-AJ-TEs"/>
+                            <constraint firstAttribute="trailing" secondItem="Kn4-JJ-V0b" secondAttribute="trailing" constant="16" id="yMp-h9-Orq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -212,4 +248,9 @@ to TS Calculator</string>
             <point key="canvasLocation" x="848.79999999999995" y="124.58770614692655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HomeButton" width="335" height="100"/>
+        <image name="ResultsButton" width="690" height="100"/>
+        <image name="ShareButton" width="335" height="100"/>
+    </resources>
 </document>

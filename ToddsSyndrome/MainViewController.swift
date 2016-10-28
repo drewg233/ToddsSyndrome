@@ -19,20 +19,15 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func seeResultsPressed(_ sender: AnyObject) {
         // Need to make sure age is successfully entered, before moving on.
         // The rest have default values.
         
-        if let ageEntered = Int(ageTextField.text!), ageEntered > 0 {
+        if let ageEntered = Int(ageTextField.text!), ageEntered > 0 && ageEntered < 100 {
             performSegue(withIdentifier: "showResultsSegue", sender: nil)
         } else {
-            // Not a valid age. Present alert.
+            // Not a valid age, present alert to enter a valid one.
             let alertController = UIAlertController(title: "Error!", message:
                 "Please enter a valid age.", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
@@ -47,8 +42,8 @@ class MainViewController: UIViewController {
             
             let age = Int(ageTextField.text!)
             let isMale = genderSegmentedControl.isEnabledForSegment(at: 0)
-            let hasMigranes = migranesSegmentedControl.isEnabledForSegment(at: 1)
-            let doesDrugs = hallucinogenicDrugsSegmentedControl.isEnabledForSegment(at: 1)
+            let hasMigranes = migranesSegmentedControl.selectedSegmentIndex == 1
+            let doesDrugs = hallucinogenicDrugsSegmentedControl.selectedSegmentIndex == 1
             
             resultsVC.results = TSCalc().chanceOfToddsSyndrome(age: age!, isMale: isMale, migranes: hasMigranes, hallucinogenicDrugs: doesDrugs)
         }
